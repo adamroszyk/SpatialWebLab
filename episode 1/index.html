@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>Welcome to</title>
+			<script src="https://unpkg.com/@magicleap/prismatic"></script>
+			<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+		</head>
+		<body>
+			<ml-quad id="over" style="position:absolute; width:333px; height:51px; position: absolute; left: 50%; top: 5%; transform: translate(-50%, -50%);"
+			  src="SWL_typo.png"
+			  z-offset="200">
+			</ml-quad>
+			<div id='main'>
+				<div id='c1' class='choice1' onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+					<ml-model src="adamLow.fbx" style="width: 300px; height: 300px"></ml-model>
+				  	<div class='description'>Technology</div>
+				</div>
+				<div id='c2' class='choice2' onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+					<ml-model src="ma.fbx" style="width: 300px; height: 300px"></ml-model>
+				  	<div class="description">Stories</div>
+				</div>
+				<div id='c3' class='choice3' onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+					<ml-model src="mariaLow.fbx" style="width: 300px; height: 300px"></ml-model>
+				 	<div class="description">Experiments</div>
+				</div>
+				<div class='help'>
+				 	<div class="description">Use touchpad to select category</div>
+				</div>
+			</div>
+		</body>
+	</html>
+
+	<script type="text/javascript">
+		function bigImg(x) {
+		    x.style.border="3px solid #F5F5F5";
+		}
+		function normalImg(x) {
+		    x.style.border="3px solid #888888";
+		}
+
+		var c1 = document.getElementById('c1');
+		c1.onclick = function() {
+					window.open("technology.html","_self")
+		};
+		var c2 = document.getElementById('c2');
+		c2.onclick = function() {
+					window.open("stories.html","_self")
+		};
+		var c3 = document.getElementById('c3');
+		c3.onclick = function() {
+					window.open("experiments.html","_self")
+		};
+	</script>
+
+	<style>
+		body{
+			background-color: black;
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			font-size:150%;
+		    font-weight: medium;
+		}
+		.description{
+			vertical-align: middle;
+			text-align: center;
+			line-height: 60px;  
+		    height: 60px;;
+			font-family: 'Roboto', sans-serif;
+			font-size:110%;
+		    margin-top: 10px;
+		  }
+
+		.choice1{
+	    	position: fixed;
+	    	background-color: black;
+		    background-opacity: .1;
+	  		width: 30%;
+		    height: 40%;
+		    margin-top: 10%;
+		    margin-left: 2.5%;
+		    border-radius: 25px; 
+		    border: 3px solid #888888;
+		}
+
+		.choice2{
+	    	position: fixed;
+	    	background-color: black;
+		    background-opacity: .5;
+	  		width: 30%;
+		    height: 40%;
+		    margin-top: 10%;
+		    margin-left: 35%;
+		    border-radius: 25px; 
+		    border: 3px solid #888888;
+		}
+
+		.choice3{
+	    	position: fixed;
+	    	background-color: black;
+		    background-opacity: .05;
+	  		width: 30%;
+		    height: 40%;
+		    margin-top: 10%;
+		    margin-left: 67.5%;
+		    border-radius: 25px; 
+		    border: 3px solid #888888;
+		}
+
+		.help{
+	    	position: fixed;
+	    	background-color: black;
+		    background-opacity: .05;
+	  		width: 50%;
+		    height: 40%;
+		    margin-top: 48%;
+		    margin-left: 50.5%;
+			font-size:90%;
+			color: #707070;
+		}
+	</style>

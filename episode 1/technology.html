@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Technology</title>
+		<script src="https://unpkg.com/@magicleap/prismatic"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	</head>
+	<body>
+		<ml-quad id="over" style="position:absolute; width:333px; height:51px; position: absolute; left: 50%; top: 5%; transform: translate(-50%, -50%);"
+			  src="SWL_typo.png"
+			  z-offset="200">
+		</ml-quad>
+
+		<div class='choice1'>
+			<ml-model src="adamLow.fbx" style="width: 600px; height: 600px" z-offset="305"></ml-model>
+			<p id="demoo">asd</p>
+		</div>
+
+		<div class='choice2'>
+			<div class='description'>
+				Let’s share what we’ve learned on the way! Here we post practical tips and technical know-how based on the experiments.
+			</div>
+		</div>
+
+		<div id="back" class='back' onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+			 Go Back ↩️
+		</div>
+	</body>
+</html>
+
+
+<script type="text/javascript">
+
+		var back = document.getElementById('back');
+		back.onclick = function() {
+					window.open("index.html","_self")
+		};
+
+		function bigImg(x) {
+		    x.style.border="3px solid #F5F5F5";
+		}
+		function normalImg(x) {
+		    x.style.border="3px solid #888888";
+		}
+
+
+</script>
+
+
+	<style>
+
+		.back{
+	    	position: fixed;
+			text-align: center;
+			line-height: 70px;  
+		    height: 70px;;
+	    	background-color: black;
+	  		width: 20%;
+		    margin-top: 41%;
+		    margin-left:80%;
+		    border-radius: 25px; 
+		    border: 3px solid #888888;%;
+			font-size:90%;
+		}
+
+		body{
+			background-color: black;
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			font-size:150%;
+		    font-weight: medium;
+		}
+
+		.description{
+			vertical-align: middle;
+			text-align: center;
+			line-height: 60px;  
+		    height: 60px;;
+			font-family: 'Roboto', sans-serif;
+			font-size:110%;
+		    margin-top: 20px;
+		  }
+
+		.choice1{
+	    	position: fixed;
+	    	background-color: black;
+		    background-opacity: .1;
+	  		width: 55%;
+		    height: 85%;
+		    margin-top: 10%;
+		    margin-left: 2.5%;
+		    border-radius: 25px; 
+		    border: 3px solid #F5F5F5;
+		}
+
+		.choice2{
+	    	position: fixed;
+	    	background-color: black;
+		    background-opacity: .5;
+	  		width: 40%;
+		    height:40%;
+		    margin-top: 10%;
+		    margin-left:60%;
+		    border-radius: 25px; 
+		    border: 3px solid #888888;
+		}
+
+
+	</style>
